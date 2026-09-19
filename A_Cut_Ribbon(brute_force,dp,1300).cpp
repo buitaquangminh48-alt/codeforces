@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     cin >> n >> a >> b >> c;
     vector<int> dp(n + 1, -1);
     dp[0] = 0;
-    for (int i = 1; i <=n; i++) {
+    for (int i = 1; i <= n; i++) {
         if (i >= a && dp[i - a] != -1) 
             dp[i] = max(dp[i], dp[i - a] + 1);
         if (i >= b && dp[i - b] != -1) 
